@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flores Amarillas — 21 de septiembre</title>
+  <meta name="description" content="Un saludo visual con flores amarillas — 21 de septiembre." />
+  <meta property="og:title" content="Flores Amarillas — 21 de septiembre" />
+  <meta property="og:description" content="Un pequeño detalle visual con flores amarillas." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{--bg:#0b0b0f}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{background:linear-gradient(180deg,#071021 0%, #0b0b0f 60%);display:flex;align-items:center;justify-content:center;color:#fff}
+    .card{width:min(920px,96vw);height:min(520px,76vh);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.6);position:relative;background:radial-gradient(circle at 20% 30%, rgba(255,255,255,0.03), transparent 20%), linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+    .canvas-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+    .overlay{position:absolute;left:24px;top:24px;z-index:40;background:rgba(0,0,0,0.25);backdrop-filter:blur(6px);padding:10px 14px;border-radius:10px;font-weight:600}
+    .overlay small{display:block;font-weight:400;opacity:.85;font-size:13px}
+    .controls{position:absolute;right:18px;bottom:18px;z-index:40;display:flex;gap:10px}
+    .btn{background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn:active{transform:translateY(1px)}
+    .scene{width:100%;height:100%;position:relative;display:grid;place-items:center}
+    svg{width:100%;height:100%;display:block}
+    .float1{animation:float 8s ease-in-out infinite}
+    .float2{animation:float 10s ease-in-out infinite reverse}
+    @keyframes float{0%{transform:translateY(0) rotate(0.5deg)}50%{transform:translateY(-18px) rotate(-0.5deg)}100%{transform:translateY(0) rotate(0.5deg)}}
+    .vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.38) 100%);mix-blend-mode:multiply;z-index:30}
+    @media (max-width:640px){.overlay{left:12px;top:12px;padding:8px 10px}.btn{padding:7px 10px;font-size:14px}}
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="overlay" id="greeting">
+      Flores amarillas · 21 de septiembre
+      <small>Un detalle visual para compartir 🌼</small>
+    </div>
+
+    <div class="canvas-wrap">
+      <div class="scene" role="img" aria-label="Animación de flores amarillas">
+        <!-- SVG de flores -->
+        <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6" result="b"/>
+              <feBlend in="SourceGraphic" in2="b" mode="normal"/>
+            </filter>
+            <radialGradient id="g1" cx="30%" cy="20%" r="60%">
+              <stop offset="0%" stop-color="#fff7d0"/>
+              <stop offset="60%" stop-color="#ffd94d"/>
+              <stop offset="100%" stop-color="#f2b200"/>
+            </radialGradient>
+          </defs>
+          <rect width="1200" height="700" fill="url(#g1)" opacity="0.06"/>
+          <g class="float1" transform="translate(180,420)">
+            <g transform="scale(1.1)">
+              <ellipse cx="0" cy="0" rx="12" ry="30" fill="#1b3b2f" opacity="0.6" transform="rotate(-18)"/>
+              <g transform="translate(18,-28)">
+                <g filter="url(#soft)">
+                  <path d="M0,0 C30,-10 50,-10 70,10 C50,30 30,30 0,20 C-30,30 -50,30 -70,10 C-50,-10 -30,-10 0,0Z" fill="#ffea6b"/>
+                  <circle cx="0" cy="0" r="12" fill="#f2b200"/>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g class="float2" transform="translate(420,520) scale(1.05)">
+            <g transform="translate(-10,-20)">
+              <path d="M0,0 C20,-12 40,-12 58,6 C40,26 20,26 0,18 C-20,26 -40,26 -58,6 C-40,-12 -20,-12 0,0Z" fill="#ffea6b"/>
+              <circle cx="0" cy="0" r="10" fill="#f29f00"/>
+            </g>
+          </g>
+          <g class="float1" transform="translate(700,360)">
+            <g transform="scale(1.5)">
+              <path d="M0,0 C40,-18 80,-18 116,12 C80,56 40,56 0,40 C-40,56 -80,56 -116,12 C-80,-18 -40,-18 0,0Z" fill="#fff08a" filter="url(#soft)"/>
+              <circle cx="0" cy="0" r="22" fill="#f2a800"/>
+              <g transform="translate(-40,78) rotate(-15)">
+                <rect x="0" y="0" width="6" height="80" rx="4" fill="#163b2d" opacity="0.6"/>
+              </g>
+            </g>
+          </g>
+          <g class="float2" transform="translate(980,200) scale(.9)">
+            <path d="M0,0 C10,-6 20,-6 30,4 C20,14 10,14 0,10 C-10,14 -20,14 -30,4 C-20,-6 -10,-6 0,0Z" fill="#ffee8f"/>
+            <circle cx="0" cy="0" r="6" fill="#f2b200"/>
+          </g>
+          <g opacity="0.65">
+            <circle cx="150" cy="80" r="6" fill="#fff9d8" opacity="0.6"/>
+            <circle cx="320" cy="140" r="4" fill="#fff9d8" opacity="0.55"/>
+            <circle cx="880" cy="90" r="8" fill="#fff9d8" opacity="0.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="vignette"></div>
+
+    <div class="controls">
+      <button class="btn" id="copyBtn">Copiar link de WhatsApp</button>
+      <button class="btn" id="openBtn">Abrir en WhatsApp (móvil)</button>
+    </div>
+  </div>
+
+  <script>
+    const hostedUrlPlaceholder = 'https://iYayoHD.github.io/flores-21sep/';
+    const message = encodeURIComponent('Te comparto este detalle visual — 21 de septiembre 🌼 ' + hostedUrlPlaceholder);
+    const waLink = 'https://wa.me/?text=' + message;
+
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(waLink);
+        document.getElementById('copyBtn').textContent = '¡Copiado!';
+        setTimeout(()=>document.getElementById('copyBtn').textContent='Copiar link de WhatsApp',1400);
+      } catch(e){
+        alert('No se pudo copiar automáticamente. Aquí está el enlace:\n' + waLink);
+      }
+    });
+
+    document.getElementById('openBtn').addEventListener('click', () => {
+      window.open(waLink, '_blank');
+    });
+  </script>
+</body>
+</html>
